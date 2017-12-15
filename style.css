@@ -1,0 +1,96 @@
+/*
+Theme Name: Kalium - Child Theme
+Theme URI: https://laborator.co/themes/kalium/
+Author: Laborator
+Author URI: https://laborator.co/
+Description: Start creating that amazing website that you have always wanted, only with Kalium — Connect with Laborator:  <a href="https://themeforest.net/user/laborator">Envato</a>, <a href="https://twitter.com/thelaborator">Twitter</a> or <a href="https://www.facebook.com/laboratorcreative">Facebook</a>.
+Version: 2.1
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: kalium
+Text Domain: kalium
+*/
+
+body {
+	font-size: 16px;
+}
+.fl-widget ul.menu {
+	text-align: right;
+}
+.fl-widget ul.menu li {
+	display: inline-block;
+	margin-left: 40px;
+}
+ul.menu li a {
+	font-size: 17px;
+}
+ul.menu li a:hover {
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+.widget.widget_text .textwidget a.button {
+	border: 1px solid #333;
+}
+.widget.widget_text .textwidget a.button:hover {
+	background: transparent;
+	border: 1px solid #333;
+}
+.site-footer .ssba a:after, 
+.wrapper .ssba a:after {
+	content: none;
+}
+/* Team */
+.team-holder .member .hover-state {
+	color: #333333;
+	background-color: rgba(255,255,255,0.7);
+}
+.team-holder .member .hover-state .member-details .job-title,
+.team-holder .member .hover-state .member-details h2 a {
+	color: #333;
+}
+/* Blog */
+.post-comment-form {
+	background: #fff;
+}
+/* Porfolio */
+.archive .product-filter {
+	display: none;
+}
+/* Taxonomy */
+.tax-item .image-placeholder>img {
+	position: initial;
+}
+.grid-holder .thumb .hover-state {
+    overflow: hidden;
+    cursor: pointer;
+}
+.grid-holder .thumb .hover-state .info {
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+    position: absolute;
+}
+.grid-holder .thumb .hover-state .info h3 a {
+    color: #fff;
+}
+.grid-holder .thumb .hover-state .info h3 {
+    font-size: 22px;
+    margin: 0;
+}
+.grid-holder .thumb .hover-state.hover-style-white {
+    background-color: #fff;
+}
+.grid-holder .thumb .hover-state.hover-distanced {
+    left: 15px;
+    right: 15px;
+    top: 15px;
+    bottom: 15px;
+    width: auto;
+    height: auto;
+}
+.grid-holder .thumb .hover-state.hover-style-white h3 a {
+    color: #111;
+}
