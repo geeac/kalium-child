@@ -14,7 +14,9 @@ if ( ! get_data( 'portfolio_prev_next' ) ) {
 }
 
 $client_tax = get_the_terms( get_the_ID(), 'client_cat' );
-$portfolio_archive_link = get_term_link( reset( $client_tax ) );
+if ( !empty( $client_tax) ) {
+	$portfolio_archive_link = get_term_link( reset( $client_tax ) );
+}
 $include_categories = false;
 $prev_next_show_titles = false;
 $prev_next_type = 'simple';

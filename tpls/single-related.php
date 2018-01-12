@@ -20,7 +20,7 @@ $post_type = get_post_type();
 	//wp_reset_query();
 
 if ($post_type == 'portfolio'){
-	$client = get_field('client');
+	if ( $client = get_field('client') ):
 	$args = array(
 		'post_type' 	=> $post_type,
 		'meta_key' 	=> 'client',
@@ -28,10 +28,11 @@ if ($post_type == 'portfolio'){
 		'post__not_in' => array( get_the_ID() ), 
 	);
 	$related_title = 'Other services for '.$client->post_title;
+	endif;
 
 }
 else if ($post_type == 'client'){
-	$client_cat = get_the_terms( get_the_ID(), 'client_cat' );
+	if ( $client_cat = get_the_terms( get_the_ID(), 'client_cat' ) ):
 	$args = array(
 		'post_type' 	=> $post_type,
 		'tax_query' => array(
@@ -44,15 +45,17 @@ else if ($post_type == 'client'){
 		'post__not_in' => array( get_the_ID() ), 
 	);
 	$related_title = 'Other '.$client_cat[0]->name.' clients';
+	endif;
 }
  
 // Related projects query.
-$related_projects = new WP_Query( $args );
-//}
+if ( !empty( $args ) ) {
+	$related_projects = new WP_Query( $args );
+}
 
 
 // Check that we have query results.
-if ( $related_projects->have_posts() ) { ?>
+if ( !empty( $related_projects ) && $related_projects->have_posts() ) { ?>
 
 	<div class="container">
 		<div class="page-container">
