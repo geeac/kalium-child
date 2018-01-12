@@ -73,6 +73,12 @@ get_header();
 			<?php include locate_template( 'tpls/single-related.php' ); ?>
 
 			<?php include locate_template( 'tpls/client-single-prevnext.php' ); ?>
+
+			<?php
+			if ( is_singular( 'client' ) ) {
+				wp_nav_menu( array( 'menu' => 'Clients Menu', 'container_class' => 'container widget fl-widget' ) );
+			}
+			?>
     	</div>
 	</div>
 

@@ -49,6 +49,13 @@ get_header(); ?>
 		endif; ?>
 			</div><!-- ..portfolio-holder -->
 		</div><!-- .row -->
+
+		<?php
+			if ( is_tax( 'client_cat' ) ) {
+				wp_nav_menu( array( 'menu' => 'Clients Menu', 'container_class' => 'container widget fl-widget' ) );
+			}
+		?>
+		
 	</div><!-- .page-container -->
 </div><!-- .container -->
 
