@@ -80,6 +80,13 @@ do_action( 'kalium_portfolio_item_before', 'type-3' );
 			<?php include locate_template( 'tpls/single-related.php' ); ?>
 
 			<?php include locate_template( 'tpls/portfolio-single-prevnext.php' ); ?>
+
+
+			<?php
+			if ( is_singular( 'portfolio' ) ) {
+				wp_nav_menu( array( 'menu' => 'Services Menu', 'container_class' => 'container widget fl-widget' ) );
+			}
+			?>
     	</div>
 	</div>
 
